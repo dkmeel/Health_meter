@@ -1,0 +1,44 @@
+﻿@model Health_Meter.Models.Person;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+<div class="ind">
+
+    <h1 style="margin-bottom: 15px;color:rgb(0,50,178) ">Update Your Details</h1>
+<div class="fm">
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <div class="nm">
+            <input type="text" value="" placeholder="Enter Name" class="name" asp-for="Name" autofocus />
+        </div>
+        <div class="ag">
+            <input type="number" value="" class="age" placeholder="Enter Age" asp-for="Age" />
+        </div>
+        <div class="ht">
+            <input type="number" value="" class="height" placeholder="Enter Height" asp-for="Height"/>
+        </div>
+        <div class="wt">
+            <input type="number" value="" class="weight" placeholder="Enter Weight" asp-for="Weight" required/>
+        </div>
+        <br />
+        <div class="li">
+            <label class="life">Select your life style</label>
+            <br/>
+            <select required name="Fnumber" id="Fnumber">
+                <option disabled selected>--Select an option--</option>
+                <option value="1">Normal</option>
+                <option value="2">Active</option>
+                <option value="3">Highly Active</option>
+                <option value="4">Deadly Active</option>
+            </select>
+        </div>
+        
+        <br />
+        <input type="submit" value="Submit" class="st"/>
+    </form>
+</div>
+</div>

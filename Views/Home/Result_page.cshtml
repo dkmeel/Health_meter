@@ -1,0 +1,22 @@
+﻿@using System;
+@model Health_Meter.Models.Person;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var scor = Model.Age + Model.Height + Model.Weight;
+    var energy = scor * Int32.Parse(Model.Fnumber);
+}
+    <div class="rd">
+        <h1 class="rh">Hi @Model.Name</h1>
+        <div class="rid">
+            <div class="rse">
+                <h3 class="rih">Your score is: @scor</h3>
+                <br/>
+                <h3 class="rih">Your energy is: @energy</h3>
+            </div>
+        </div>
+    </div>
+<iframe class="ifr" width="420" height="315"
+        src="https://www.youtube.com/embed/jCGk2n2zJ-s">
+</iframe>
